@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+
+<body>
+<h1>Result</h1>
+<p>Experience  added , GreatNews</p>
+
+<h2>Experience</h2>
+<p th:text="'Title: ' + ${newexp.jobTitle}"/>
+<p th:text="'Your organization: ' + ${newexp.company}"/>
+<p th:text="'Your start date: ' + ${newexp.startTime}"/>
+<p th:text="'Your end date: ' + ${newexp.endTime}"/>
+<p th:text="'Your duty 1: ' + ${newexp.position}"/>
+
+<div>
+    <a href="/addedu">Add additional education</a><br/>
+    <a href="/addexp">Add additional experience</a><br/>
+    <a href="/addskill">Add additional skill</a><br/>
+    <a href="/showall">Display user profile</a><br/>
+</div>
+
+</body>
+</html>

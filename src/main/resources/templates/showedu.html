@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+
+<body>
+<h1>Result</h1>
+<p>Education successfully added to your resume in Robo Resume Database! Congrats!</p>
+
+<h2>Education</h2>
+<p th:text="'Degree: ' + ${newedu.degree}"/>
+<p th:text="'Your univeristy: ' + ${newedu.university}"/>
+<p th:text="'Your graduation year: ' + ${newedu.graduationYear}"/>
+
+<div>
+    <a href="/addedu">Add additional education</a><br/>
+    <a href="/addexp">Add additional experience</a><br/>
+    <a href="/addskill">Add additional skill</a><br/>
+    <a href="/showall">Display user profile</a><br/>
+</div>
+
+</body>
+</html>

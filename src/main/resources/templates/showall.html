@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+
+<p>succesfully added.</p>
+
+<h2>Rresume Result</h2>
+<th:block th:each="oneperson:${person}">
+    <p th:text="'Your name: ' + ${oneperson.firstName}"/>
+    <p th:text="'Your email: ' + ${oneperson.email}"/>    </th:block>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+
+<body>
+<h1>Result</h1>
+<p>Skill added.. GreatNews.</p>
+
+<h2>Skills</h2>
+<p th:text="'Skill: ' + ${newskill.skillName}"/>
+
+
+<div>
+    <a href="/addedu">Add additional education</a><br/>
+    <a href="/addexp">Add additional experience</a><br/>
+    <a href="/addskill">Add additional skill</a><br/>
+    <a href="/showall">Display user profile</a><br/>
+</div>
+
+</body>
+</html>

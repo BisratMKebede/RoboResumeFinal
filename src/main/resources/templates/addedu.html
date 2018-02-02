@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+</head>
+<body>
+<p> Add Edu Here</p>
+<h1>Edu</h1>
+<form action="#" th:action="@{/addedu}" th:object="${newedu}" method="post">
+
+    <span th:if="${#fields.hasErrors('degree')}" th:error="*{degree}">Degree is required</span>
+    <p>Add degree: <input> type="text" th:field="*{degree}"/></p>
+
+    <span th:if="${#fields.hasErrors('university')}" th:error="*{university}">University is required</span>
+    <p>Add university: <input> type="text" th:field="*{university}"/></p>
+
+    <span th:if="${#fields.hasErrors('graduationYear')}" th:error="*{graduationYear}"> Graduation year is required</span>
+    <p>Enter graduation year: <input> type="text" th:field="*{graduationYear}"/></p>
+
+    <p><input type="submit" value="Add edu"/> <input type="reset" value="Reset"/></p>
+</form>
+
+
+</body>
+</html>

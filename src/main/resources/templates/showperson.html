@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+
+<body>
+<h1>Result</h1>
+<p>User added </p>
+
+<h2> th:text=" </h2>
+<p th:text="'Welcome: ' + ${newperson.firstName}"/>
+<p th:text="'Your phoneNo: ' + ${newperson.phonNo}"/>
+<p th:text="'Your email: ' + ${newperson.email}"/>
+
+
+<div>
+    <a href="/addeducation">Add additional education</a><br/>
+    <a href="/addexperience">Add additional experience</a><br/>
+    <a href="/addskill">Add additional skill</a><br/>
+</div>
+
+</body>
+</html>
