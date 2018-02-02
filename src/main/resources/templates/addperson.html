@@ -10,7 +10,7 @@
 <form action="#" th:action="@{/addperson}" th:object="${newperson}" method="post">
 
     <span th:if="${#fields.hasErrors('firstName')}" th:error="*{firstName}">First name is required</span>
-    <lebel>Enter phonNo: </lebel><input type="text" th:field="*{firstName}" />
+    <lebel>Enter firstName: </lebel><input type="text" th:field="*{firstName}" />
     <span th:if="${#fields.hasErrors('lastName')}" th:error="*{lastName}">Last name is required</span>
     <lebel>Enter last name:</lebel> <input type="text" th:field="*{lastName}"/>
     <span th:if="${#fields.hasErrors('phonNo')}" th:error="*{phonNo}">Your email is required</span>

@@ -7,14 +7,14 @@
 
 <body>
 <h1>Result</h1>
-<p>Experience  added , GreatNews</p>
+
 
 <h2>Experience</h2>
-<p th:text="'Title: ' + ${newexp.jobTitle}"/>
-<p th:text="'Your organization: ' + ${newexp.company}"/>
-<p th:text="'Your start date: ' + ${newexp.startTime}"/>
-<p th:text="'Your end date: ' + ${newexp.endTime}"/>
-<p th:text="'Your duty 1: ' + ${newexp.position}"/>
+<p><td th:text="'Title: ' + ${newexp.jobTitle}"></td></p>
+<p><td th:text="'Your organization: ' + ${newexp.company}"></td></p>
+<p><td th:text="'Your start date: ' + ${newexp.startTime}"></td></p>
+<p><td th:text="'Your end date: ' + ${newexp.endTime}"></td></p>
+<td th:text="'Your position: ' + ${newexp.position}"></td>
 
 <div>
     <a href="/addedu">Add additional education</a><br/>

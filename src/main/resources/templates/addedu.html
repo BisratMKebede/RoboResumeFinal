@@ -5,9 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
 </head>
 <body>
-<p> Add Edu Here</p>
+<p> Add Education Here</p>
 <h1>Edu</h1>
-<form action="#" th:action="@{/addedu}" th:object="${newedu}" method="post">
+<form action="#" th:action="@{/addedu}"
+      th:object="${newedu}"
+      method="post">
 
     <span th:if="${#fields.hasErrors('degree')}" th:error="*{degree}">Degree is required</span>
     <lebel> Add degree:</lebel><input type="text" th:field="*{degree}" />

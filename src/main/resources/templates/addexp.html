@@ -7,8 +7,10 @@
 <body>
 <p> Add Experiences.</p>
 <h1>Experience</h1>
-<form action="#" th:action="@{/addexp}" th:object="${newexp}" method="post">
-
+<form action="#"
+      th:action="@{/addexp}"
+      th:object="${newexp}"
+      method="post">
     <span th:if="${#fields.hasErrors('jobTitle')}" th:error="*{jobTitle}">jobTitle is required</span>
     <lebel> Enter your job title:</lebel> <input type="text" th:field="*{jobTitle}"/>
 

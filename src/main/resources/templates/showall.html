@@ -10,7 +10,7 @@
 
 <h2>Rresume Result</h2>
 <th:block th:each="oneperson:${person}">
-    <p th:text="'Your name: ' + ${oneperson.firstName}"/>
-    <p th:text="'Your email: ' + ${oneperson.email}"/>    </th:block>
+  <p>  <td th:text="'Your name: ' + ${oneperson.firstName}"></td> </p>
+   <p> <td th:text="'Your email: ' + ${oneperson.email}"></td> </p>  </th:block>
 </body>
 </html>
