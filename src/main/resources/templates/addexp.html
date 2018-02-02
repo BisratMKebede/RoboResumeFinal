@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Form Submission</title>
-    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
 </head>
 <body>
 <p> Add Experiences.</p>
@@ -10,22 +10,23 @@
 <form action="#" th:action="@{/addexp}" th:object="${newexp}" method="post">
 
     <span th:if="${#fields.hasErrors('jobTitle')}" th:error="*{jobTitle}">jobTitle is required</span>
-    <p>Enter your job title: <input> type="text" th:field="*{jobTitle}"/></p>
+    <lebel> Enter your job title:</lebel> <input type="text" th:field="*{jobTitle}"/>
 
     <span th:if="${#fields.hasErrors('company')}" th:error="*{company}">company is required</span>
-    <p>Enter your company: <input> type="text" th:field="*{company}"/></p>
+    <lebel>Enter your company: </lebel><input type="text" th:field="*{company}"/>
 
     <span th:if="${#fields.hasErrors('startTime')}" th:error="*{startTime}">Start date is required; add in designated format</span>
-    <p>Enter your start date (day,month and year): <input> type="text" th:field="*{startTime}"/></p>
+    <lebel>Enter your start date (day,month and year): </lebel><input type="text" th:field="*{startTime}" />
 
     <span th:if="${#fields.hasErrors('endTime')}" th:error="*{endTime}">End date is required; add in designated format</span>
-    <p>Enter your end date (day,month and year): Enter "Still working" if it is your current job. <input> type="text" th:field="*{endTime}"/></p>
+    <lebel>Enter your end date (day,month and year): Enter "Still working" if it is your current job.</lebel> <input type="text"
+        th:field="*{endTime}" />
 
     <span th:if="${#fields.hasErrors('position')}" th:error="*{position}">position is required</span>
-    <p>Enter your position 1: <input type="text" th:field="*{position}" /></p>
+    <lebel>Enter your position 1:</lebel> <input type="text" th:field="*{position}" />
 
 
-    <p><input type="submit" value="Add exp"/> <input type="reset" value="Reset"/></p>
+    <input type="submit" value="Add exp"/> <input type="reset" value="Reset"/>
 </form>
 
 

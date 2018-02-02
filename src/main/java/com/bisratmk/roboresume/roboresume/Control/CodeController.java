@@ -11,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -38,9 +36,10 @@ public class CodeController {
         return "homepage";
     }
 
+
     @GetMapping("/addPerson")
     public String addPerson(Model model){
-        if (personRepository.count() > 1) {
+        if (personRepository.count() >= 1) {
             return "max";
         }
 
@@ -48,7 +47,7 @@ public class CodeController {
         return "addperson";
     }
 
-    @PostMapping("/addperson")
+    @PostMapping("/addPerson")
     public String postperson(@Valid @ModelAttribute("newperson") Person person, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "addperson";
@@ -59,7 +58,7 @@ public class CodeController {
     }
 
 
-    @GetMapping("/addedu")
+    @GetMapping("/addEdu" )
     public String addEdu(Model model) {
 
         if (eduRepository.count() > 8) {
@@ -70,7 +69,7 @@ public class CodeController {
         return "addedu";
     }
 
-    @PostMapping("/addedu")
+    @PostMapping("/addEdu" )
     public String postEdu(@Valid @ModelAttribute("newedu") Edu edu, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "addedu";
@@ -81,7 +80,7 @@ public class CodeController {
     }
 
 
-    @GetMapping("/addskill")
+    @GetMapping( "/addSkill")
     public String addSkill(Model model) {
         if (skillRepository.count() > 10) {
             return "max";
@@ -91,7 +90,7 @@ public class CodeController {
         return "addskill";
     }
 
-    @PostMapping("/addskill")
+    @PostMapping("/addSkill")
     public String postSkill(@Valid @ModelAttribute("newskill") Skill skill, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "addskill";
@@ -102,7 +101,7 @@ public class CodeController {
     }
 
 
-    @GetMapping("/addexp")
+    @GetMapping("/addExp")
     public String addExp(Model model) {
         if (expRepository.count() > 10) {
             return "max";
@@ -111,7 +110,7 @@ public class CodeController {
         return "addexp";
     }
 
-    @PostMapping("/addexperience")
+    @PostMapping("/addExp")
     public String postExperience(@Valid @ModelAttribute("newexp") Exp exp, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "addexp";
@@ -120,7 +119,7 @@ public class CodeController {
         expRepository.save(exp);
         return "showexp";
     }
-    @GetMapping("/showall")
+    @GetMapping("/showAll")
     public String getAll(Model model) {
         if (personRepository.count() == 0) {
             return "/addperson";
